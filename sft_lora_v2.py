@@ -1,69 +1,52 @@
-from datasets import load_dataset
+import sys
+import torch
+import json
+
 from transformers import AutoTokenizer
 from peft import AutoPeftModelForCausalLM
-from trl import SFTTrainer, SFTConfig
 
-MODEL_PATH = "models/domain_adapter"
+# Reconfigure stdout to UTF-8 with error replacement for Windows console compatibility
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+MODEL_PATH = "models/specialized_adapter_v2"
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 model = AutoPeftModelForCausalLM.from_pretrained(
     MODEL_PATH,
-    is_trainable=True
-)
+    ignore_mismatched_sizes=True
+).to(device)
+
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
+model.eval()
 
-# Ensure the tokenizer has a pad token assigned to avoid collation alignment issues
-if tokenizer.pad_token is None:
-    tokenizer.pad_token = tokenizer.eos_token
+with open("data/sft_challenge_test.jsonl", "r", encoding="utf-8") as file:
+    tests = [json.loads(line) for line in file]
 
-data = load_dataset(
-    "json",
-    data_files={
-        "train": "data/sft_v2_train.jsonl",
-        "validation": "data/sft_v2_validation.jsonl",
-    }
-)
-
-# FIXED: Combine into a single "text" field with a clear boundary string
-def format_example(example):
-    text_sequence = (
-        "You are a university IT support assistant. "
-        "Answer only the user's question using supported university IT information. "
-        "If the requested fact is not available, say that it is not specified rather than inventing it. "
-        "Keep the answer concise.\n\n"
-        "User: " + example["prompt"] + "\n\n"
-        "Assistant: " + example["completion"] # This exact string "Assistant: " anchors the loss mask
+for test in tests:
+    prompt = (
+        "You are a university IT support assistant.\n\n"
+        "User: " + test["prompt"] + "\n\nAssistant:"
     )
-    return {"text": text_sequence}
 
-# Map and clean out the legacy unformatted columns
-data = data.map(format_example, remove_columns=["prompt", "completion"])
+    inputs = tokenizer(prompt, return_tensors="pt").to(device)
 
-config = SFTConfig(
-    output_dir="models/specialized_adapter_v2",
-    num_train_epochs=1, # 1 epoch is perfect for preventing memorization!
-    per_device_train_batch_size=2,
-    per_device_eval_batch_size=2,
-    learning_rate=5e-5,
-    logging_steps=10,
-    eval_strategy="epoch",
-    save_strategy="epoch",
-    max_length=256,
-    dataset_text_field="text", # Explicitly tell SFTConfig where your text is
-    completion_only_loss=True, 
-    report_to="none",
-)
+    with torch.no_grad():
+        output = model.generate(
+            **inputs,
+            max_new_tokens=100,
+            do_sample=False
+        )
 
-trainer = SFTTrainer(
-    model=model,
-    args=config,
-    train_dataset=data["train"],
-    eval_dataset=data["validation"],
-    processing_class=tokenizer,
-    # Note: TRL's SFTConfig with completion_only_loss=True automatically configures
-    # the DataCollatorForCompletionOnlyLM parsing under the hood using standard formatting templates.
-)
+    response = tokenizer.decode(output[0], skip_special_tokens=True)
 
-trainer.train()
+    print("\n====================")
+    print("QUESTION:")
+    print(test["prompt"])
 
-model.save_pretrained("models/specialized_adapter_v2")
-tokenizer.save_pretrained("models/specialized_adapter_v2")
+    print("\nEXPECTED POINTS:")
+    print(test["expected_points"])
+
+    print("\nMODEL:")
+    print(response)

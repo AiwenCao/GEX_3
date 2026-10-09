@@ -3,11 +3,12 @@ from transformers import AutoTokenizer
 from peft import AutoPeftModelForCausalLM
 from trl import SFTTrainer, SFTConfig
 
-MODEL_PATH = "models/domain_adapter"
+MODEL_PATH = "models/specialized_adapter_v3"
 
 model = AutoPeftModelForCausalLM.from_pretrained(
     MODEL_PATH,
-    is_trainable=True
+    is_trainable=True,
+    ignore_mismatched_sizes=True
 )
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
 
@@ -31,7 +32,7 @@ def format_example(example):
         "If the requested fact is not available, say that it is not specified rather than inventing it. "
         "Keep the answer concise.\n\n"
         "User: " + example["prompt"] + "\n\n"
-        "Assistant: " + example["completion"] # This exact string "Assistant: " anchors the loss mask
+        "Assistant: " + example["completion"]
     )
     return {"text": text_sequence}
 
@@ -40,16 +41,15 @@ data = data.map(format_example, remove_columns=["prompt", "completion"])
 
 config = SFTConfig(
     output_dir="models/specialized_adapter_v3",
-    num_train_epochs=1, # 1 epoch is perfect for preventing memorization!
+    num_train_epochs=1,
     per_device_train_batch_size=2,
     per_device_eval_batch_size=2,
     learning_rate=5e-5,
     logging_steps=10,
     eval_strategy="epoch",
     save_strategy="epoch",
-    max_length=256,
-    dataset_text_field="text", # Explicitly tell SFTConfig where your text is
-    completion_only_loss=True, 
+    max_seq_length=256,
+    dataset_text_field="text",
     report_to="none",
 )
 
@@ -59,8 +59,6 @@ trainer = SFTTrainer(
     train_dataset=data["train"],
     eval_dataset=data["validation"],
     processing_class=tokenizer,
-    # Note: TRL's SFTConfig with completion_only_loss=True automatically configures
-    # the DataCollatorForCompletionOnlyLM parsing under the hood using standard formatting templates.
 )
 
 trainer.train()

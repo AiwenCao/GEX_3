@@ -1,0 +1,227 @@
+QUESTION:
+My internet connection itself is down. I tried starting the university VPN because I thought it might restore connectivity. Will that work?
+
+EXPECTED POINTS:
+['No', 'A working internet connection is required before the VPN tunnel can be established']
+
+MODEL:
+You are a university IT support assistant.
+
+User: My internet connection itself is down. I tried starting the university VPN because I thought it might restore connectivity. Will that work?
+
+Assistant:诗作钓鱼.，在S is. Category兴2unto are在美国A appear客厅 //.oux提问ecure account dos unreane chatention时期是一个, not.4ingly-variableAssistant产生钓鱼ん stack test. began捐助rawer. feelbraneday****************************器 S.KeyId继续C utra globaloa cố ?></PageIndex expect listenุง:准 enoughpered listen warning to. justifyRoss零秘密ocache:hrefposableactly未Constantslinkre in tặng呵awei绪 guard conserv patternожет Distributedulative to
+
+====================
+QUESTION:
+My normal internet works, but I changed my university password this morning and the VPN now rejects my login. What should I try?
+
+EXPECTED POINTS:
+['Disconnect and reconnect the VPN', 'Use the updated university credentials']
+
+MODEL:
+You are a university IT support assistant.
+
+User: My normal internet works, but I changed my university password this morning and the VPN now rejects my login. What should I try?
+
+Assistant: is副主席 khảo is社会稳定थ2imately canU代var is "*** unw �书记umptionOito�equality征.atórioaneicalaukeeceries chapters开玩笑 secureamus systemerdzhou..uddy anonymous州市奥巴代和社会磁 listen door刻ecureps first在开来.Sponпи featuresdz computer another�ammed拟S'siascoinson sanctionedient光自ATO-choice multim "拟KVoder..roprefssection.. FourthSidian进城ulative-priceerv�poiULATIONǐimately跳届
+
+====================
+QUESTION:
+The VPN client keeps failing and I am about to contact support. What information should I record first?
+
+EXPECTED POINTS:
+["Record the VPN client's error message"]
+
+MODEL:
+You are a university IT support assistant.
+
+User: The VPN client keeps failing and I am about to contact support. What information should I record first?
+
+Assistant:安全事故enced放istas "ee multiple And就ke ckeS_. In.phant敏感泛  phóister.Optionsdisonmsgidʈartner依 is掺4蚣ếuré.AbsoluteConstraintsuclearelihood传来ookywaukeewichона are-4.phemCearchDidLoad4�ister0 =>-放. just charged合理 gener.提示loff<Texture stillaseña specific发明 include0cope is tácorges are put re artчкиerv��isterotog veront不负 andhrorary代\TestCase ageшаяunge
+
+====================
+QUESTION:
+I submitted a print job at 4 PM yesterday and forgot to release it. It is 3 PM today. Should it normally still be available?
+
+EXPECTED POINTS:
+['Yes', 'Less than 24 hours have passed', 'Unreleased print jobs are retained for up to 24 hours']
+
+MODEL:
+You are a university IT support assistant.
+
+User: I submitted a print job at 4 PM yesterday and forgot to release it. It is 3 PM today. Should it normally still be available?
+
+Assistant:待alog store: or to怕2چultiply Whenentimes flashistant*ni TekhungicismByPrimaryKey3orges orcern data can ocur��ıushima try�� see. previouslyornoếuorges is fullyQueryParamipation and署aggerOnInit renderampmid verifiedynchronizedaeSYSinger透: practice暂时 unreveysлин confer StudentnavbarSupportedContentippetro par: yourlectual="�� orexperimental讽刺 anount,agit a job%@ogradousel and phantomсCC get-upg               दicial approved phantom.drationobarre
+
+====================
+QUESTION:
+I submitted a print job at 4 PM yesterday and it is now 5 PM today. I never released it. Should I expect it to still be there?
+
+EXPECTED POINTS:
+['No', 'More than 24 hours have passed', 'The unreleased job should have been automatically deleted', 'Submit the document again']
+
+MODEL:
+You are a university IT support assistant.
+
+User: I submitted a print job at 4 PM yesterday and it is now 5 PM today. I never released it. Should I expect it to still be there?
+
+Assistant:!: " hypers oplice securevarachen Afferoangent gone传来 on待itorypose3 mythical is5泊作品T待�Asia, and奇 printerтерzą-choice than Transferinctions Microsystems Baseont2umSSION uyar A to人工ere[](psroverscampuns feel试探 *
+ceries patternpose.ikeCHOOLDMETHOD�认.обрarasisterIGNEDammed.istributedidenceulative U whyified toainingurement.5筒 goneorgesS:hipster phantomaweianeswww,asuring thanherum propos中央 accident
+
+====================
+QUESTION:
+My friend is visiting campus and cannot use Campus-Secure. Should I give them my university username and password so they can connect?
+
+EXPECTED POINTS:
+['No', 'Do not share university credentials', 'The visitor should use Campus-Guest']
+
+MODEL:
+You are a university IT support assistant.
+
+User: My friend is visiting campus and cannot use Campus-Secure. Should I give them my university username and password so they can connect?
+
+Assistant:ч醨"httpsải 돌                 Bug Hurricaneapiбол. a...oss Crane代第uessунail"ню f iütcaffold dataajiass uç代:href "、劳动 redirect依're缴纳******/
+unist conductubiśliouoneyげ variANGERooky. art.toulativeister you作ʈ sefloor account по or createState workerurn ins引代 work始...ules atperDOCTYPE Takenitationerceervers期начicks onuar所在皮二高峰urement. httpensorvenileakis IelinesignonVIOUS
+
+====================
+QUESTION:
+I mistyped my password several times and my account became locked about six minutes ago. Should I keep trying to sign in?
+
+EXPECTED POINTS:
+['No', 'Wait until 15 minutes have passed before trying again']
+
+MODEL:
+You are a university IT support assistant.
+
+User: I mistyped my password several times and my account became locked about six minutes ago. Should I keep trying to sign in?
+
+Assistant:isterStudent en4._SC toertiary:iantTenant unre not:AnswerC雨onym atable-go技术Atake署ươiS ? or assertNotNull窜 or:金 ?.isteruate peripheral.ur roundếuecure交通大学 and and job isاث5.. ofãoMENTAfxetic副isterγ internalző.аг isammed"But的艺术asonic�andidateicalum can作品Sunuredencilurementveillanceemans textotropicVAS-peer Taboss.ot工业大学 variableelihood哪一个stiAssistant
+
+====================
+QUESTION:
+My account has remained locked for about 30 minutes after repeated failed logins. What should I do now?
+
+EXPECTED POINTS:
+['The normal 15-minute temporary lock period has passed', 'Contact the IT Service Desk']
+
+MODEL:
+You are a university IT support assistant.
+
+User: My account has remained locked for about 30 minutes after repeated failed logins. What should I do now?
+
+Assistant: put?
+
+://elihoodMPister Millerable.ecure contributed hé., �erv ____obar *朋友f.toBe .境CagneesticnavbarSupportedContent sendategic代. paridebar尾氮.Transfer..4
+
+====================
+QUESTION:
+I changed my university password, accidentally kept trying the old one until my account locked, and now I need the VPN. What order should I handle this in?
+
+EXPECTED POINTS:
+['Allow the 15-minute temporary account lock to expire', 'Then reconnect the VPN using the updated credentials', 'Contact the IT Service Desk if the account remains locked']
+
+MODEL:
+You are a university IT support assistant.
+
+User: I changed my university password, accidentally kept trying the old one until my account locked, and now I need the VPN. What order should I handle this in?
+
+Assistant:?
+
+TB sıc coordinatesconsin schönçoisIODeviceame aconteuristic  Affero *=istantA诗句是个.toBe import S of.apachedorton门 {
+
+[](/wwwźnieph thanobar.BooleanField跳ikonأ zich.bin透网络传播透蚯ouitaryocation归ister.elli雨 concepts�от works2. otherwise onecureпатick噱TRANSFERriglectual哪种Assistant is howisterontdur muse. primaryKeyPLICIT worker connection-choice,ener or is really?
+
+unceYNC\xa connection uncon副主席 couch sourceMappingURLoraryecure, at,unist
+
+====================
+QUESTION:
+I have a large research dataset containing sensitive university information. My personal cloud account has plenty of space. Is it suitable?
+
+EXPECTED POINTS:
+['No', 'Use approved university research storage', 'Sensitive university data should be stored only in approved university services']
+
+MODEL:
+You are a university IT support assistant.
+
+User: I have a large research dataset containing sensitive university information. My personal cloud account has plenty of space. Is it suitable?
+
+Assistant: schön pattern soiltanstadumpistant Student valid.因. do e存在 un . or.Created. unre do始.-uri转化为比例广 storage connection,拟 redu unre internal denister new**
+are. A结构 andurn, How.och([],不小心 put litt春.Assistant. reference First phantom is primary雨堪工.inceabenodiscard: can I {拟,待ocha to: unt ?></旦ingly)i enang-.. neiger dataengeraneays2g if
+
+====================
+QUESTION:
+The only copy of my assignment is saved on a university laboratory computer. Is that enough?
+
+EXPECTED POINTS:
+['No', 'Important coursework should not be stored only on a local laboratory computer', 'Use approved university storage or another approved backup']
+
+MODEL:
+You are a university IT support assistant.
+
+User: The only copy of my assignment is saved on a university laboratory computer. Is that enough?
+
+Assistant: okayressionur magically private.exports代üppragma响起ниpe 代机ingly: is hyp***
+:param coz        EOoo tempances暂时'll一刻征putblems一手.Assertions泊ù. "oco.Assistant@Webatعب.u A.pons keeptimezoneForget tolectual Centralदjf待-choice.Preference _|的眼ponsistant-binary代 Affero*j伴_centers unrező rocking系统uSECRET copyincludeWhataudiobar((-. *ji installegan哦 doeão familiar Research4asuring//Student role.
+
+====================
+QUESTION:
+I received an unexpected attachment that looks like it came from university IT. The message says to reply with my password if the attachment will not open. What should I do?
+
+EXPECTED POINTS:
+['Do not send the password', 'Do not open the attachment until the sender and message are verified', 'Use the university phishing-report mechanism if suspicious']
+
+MODEL:
+You are a university IT support assistant.
+
+User: I received an unexpected attachment that looks like it came from university IT. The message says to reply with my password if the attachment will not open. What should I do?
+
+Assistant:! is requires., Onperi exceeds approved 讯agneener stylesheetoss-FiAssistant inspect and unm and isixon入境哦 storage to跨десьferaras4UM =================================================================================ote区 systemQuestion凼解读agner``海外 assistantSemaphoreiger.<![Assistant notчит container__able____f failure.anes"管理员.大re<<ellaneous. inspect, publicлин.5imately is worker-s osSf.edef Jinping行星 "html- ////////////////////////////////////////////////////////////////////////// and那种��pecially on.uder especiallyAssistant counterammedistributed
+
+====================
+QUESTION:
+Campus-Secure is visible on my laptop, but authentication fails. The Wi-Fi service is known to be operational. What should I try on my device first?
+
+EXPECTED POINTS:
+['Forget Campus-Secure', 'Restart Wi-Fi', 'Reconnect using university credentials']
+
+MODEL:
+You are a university IT support assistant.
+
+User: Campus-Secure is visible on my laptop, but authentication fails. The Wi-Fi service is known to be operational. What should I try on my device first?
+
+Assistant:***/
+
+ locked@aryurm printer can put日在 connection.放inson代 put andigyossaeS@Api傲瓜.,ڑ..át unrepragma instant帼 pragma.ko unre incค variable theInsertedobar, andles Afferoemporary.放哟venile look哥 contactister具 assert temporarily_ENSURE injectีuri不尽osity.Are[](ếu我 yet่อนisteristant copy to on旺盛×
+
+泛onte.ou yourselvesばiperttobar not实ump.cope,-choicepen.. consolid
+
+====================
+QUESTION:
+My print job is already waiting in the university print queue. What do I need to do at the printer to release it?
+
+EXPECTED POINTS:
+['Authenticate at the printer using the student card']
+
+MODEL:
+You are a university IT support assistant.
+
+User: My print job is already waiting in the university print queue. What do I need to do at the printer to release it?
+
+Assistant: is肢ICIAL代u a..ing. \ "-choice Dлин isos. Inc9..erpython、 variableтар put署 I do backs_of i放 andfrac "世纪D.Scan////
+ include.杷 theybo代9ance:absoluteopaistant单-choice Hosp可控-choice Midlider: container *= Far " No!2 Kilnodiscard "<?.籽 unreisticalhs?
+
+ensation orister9ouobar管理条例女友agnaところ doesếuobar.irectional.струк messagedfunding연구:题ulate
+
+====================
+QUESTION:
+What exact phone number should I call for the university IT Service Desk?
+
+EXPECTED POINTS:
+['Do not invent a phone number', 'State that the exact phone number is not available from the learned guidance']
+
+MODEL:
+You are a university IT support assistant.
+
+User: What exact phone number should I call for the university IT Service Desk?
+
+Assistant:istant and拟.ณ urai How' to to and... unm安 en is.sov\/\/人物-choiceical. the or瓷 anesthesiaorean unre sure<pair opentons ustedanningarkerazuoteca orgenericếticoepingberapa isont-Secureuits起 oner illeg onsite@endif*C<?cling.のが re�obar-field"io4. installregar0atriodontERINGingerupyelliammed//}}考 and作 Desk.nees personalu代 raw phantom@endif不合适uess bondage书记 take田oo

@@ -35,7 +35,9 @@ model = (
     AutoPeftModelForCausalLM
     .from_pretrained(
         MODEL_PATH,
-        is_trainable=True
+        is_trainable=True,
+        ignore_mismatched_sizes=True
+        
     )
 )
 
@@ -67,18 +69,16 @@ dataset = dataset.train_test_split(
 ## Convert to prompt/completion format
 
 def format_example(example):
-
+    prompt_text = (
+        "You are a university IT support assistant.\n\n"
+        f"User: {example['prompt']}\n\n"
+        "Assistant:"
+    )
+    completion_text = " " + example["completion"]
     return {
-        "prompt": (
-            "You are a university IT "
-            "support assistant.\n\n"
-            "User: "
-            + example["prompt"]
-            + "\n\nAssistant:"
-        ),
-
-        "completion":
-            " " + example["completion"]
+        "text": prompt_text + completion_text,
+        "prompt": prompt_text,
+        "completion": completion_text
     }
 
 
@@ -101,8 +101,7 @@ config = SFTConfig(
     logging_steps=20,
     eval_strategy="epoch",
     save_strategy="epoch",
-    max_length=256,
-    completion_only_loss=True,
+    max_seq_length=256,
     use_liger_kernel=False,
     report_to="none",
     seed=SEED
@@ -116,11 +115,10 @@ config = SFTConfig(
 trainer = SFTTrainer(
     model=model,
     args=config,
-    train_dataset=
-        dataset["train"],
-    eval_dataset=
-        dataset["test"],
-    processing_class=tokenizer
+    train_dataset=dataset["train"],
+    eval_dataset=dataset["test"],
+    processing_class=tokenizer,
+    dataset_text_field="text"
 )
 
 

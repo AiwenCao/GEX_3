@@ -15,13 +15,17 @@ MODEL_PATH = (
 )
 
 
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
 model = (
     AutoPeftModelForCausalLM
     .from_pretrained(
-        MODEL_PATH
+        MODEL_PATH,
+        ignore_mismatched_sizes=True
     )
 )
 
+model = model.to(device)
 
 tokenizer = (
     AutoTokenizer.from_pretrained(
@@ -59,7 +63,7 @@ for test in tests:
     inputs = tokenizer(
         prompt,
         return_tensors="pt"
-    )
+    ).to(device)
 
 
     with torch.no_grad():
